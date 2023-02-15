@@ -1,0 +1,645 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* font-family: 'MyWebFont'; */
+    font-family: "Work Sans", sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+:root {
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+}
+
+/* @font-face {
+        font-family: 'MyWebFont';
+        src: url('../fonts/Raleway-Bold.ttf');
+} */
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.main-section {
+    height: 100vh;
+    /* border: 2px solid red; */
+    position: relative;
+
+}
+
+.main-image {
+    background-image: url('../images/black-marble-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 90%;
+    position: relative;
+
+}
+
+
+.main-image .text-main-image {
+    color: white;
+    /* border: 2px solid red; */
+    text-align: center;
+    width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+}
+
+.main-image .text-main-image h2 {
+    margin-bottom: 50px;
+    font-size: 50px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    padding: 10px 0;
+}
+
+.main-image .text-main-image .btn-learn-more {
+    padding: 15px 20px;
+    color: white;
+    border: none;
+    border: 2px solid white;
+    background-color: transparent;
+    transition: all .3s ease;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.main-image .text-main-image .btn-learn-more:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.points-main-image {
+    position: absolute;
+    /* border: 2px solid green; */
+    width: 50px;
+    top: 550px;
+    right: 150px;
+}
+
+.points-main-image .circle-points-main-image {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+
+.points-main-image .circle-points-main-image:hover {
+    background-color: white;
+}
+
+.main-header {
+    position: absolute;
+    background-color: var(--dark-color);
+    height: 10%;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.main-header h2 {
+    color: white;
+}
+
+.main-header h2 span {
+    color: #33d1cc;
+}
+
+.main-header ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+}
+
+.main-header ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .3s ease;
+}
+
+.main-header ul li a:hover {
+    color: #33d1cc;
+}
+
+.goals-section {
+    height: 40vh;
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+
+}
+
+.parent-goals-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-goals-section {
+    width: 350px;
+    height: 200px;
+    /* border: 2px solid red; */
+    line-height: 28px;
+}
+
+.box-goals-section h2 {
+    margin-bottom: 35px;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.box-goals-section p {
+    color: gray;
+}
+
+.about-me-section {
+    height: 80vh;
+    /* border: 2px solid red; */
+}
+
+.parent-about-me-section {
+    display: flex;
+
+}
+
+.parent-about-me-section .left-about-me-section {}
+
+.parent-about-me-section .left-about-me-section {
+    height: 80vh;
+    width: 1000px;
+    background-image: url('../images/black-marble-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border: 2px solid blue; */
+    position: relative;
+}
+
+.parent-about-me-section .left-about-me-section::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #33d1cc;
+    opacity: .4;
+}
+
+.parent-about-me-section .right-about-me-section {
+    width: calc(100vw-550px);
+    /* width: 900px; */
+    /* border: 2px solid rgb(36, 188, 31); */
+    background-color: #f2f2f2;
+    line-height: 28px;
+    padding: 50px 10%;
+    overflow: hidden;
+    height: 80vh;
+}
+
+.parent-about-me-section .right-about-me-section h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.parent-right-about-me-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.parent-right-about-me-section .box-right-about-me-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 48%;
+    height: fit-content;
+    /* border: 2px solid green; */
+    margin-top: 25px;
+    gap: 20px;
+}
+
+.parent-right-about-me-section .box-right-about-me-section .icon-text h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.icon-text {
+    width: 350px;
+}
+
+.fas,
+.fab {
+    font-size: 35px;
+    color: var(--green-color);
+}
+
+.my-skills-section {
+    height: 70vh;
+    /* border: 2px solid blue; */
+}
+
+.parent-my-skills-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.parent-my-skills-section .left-my-skills-section {
+    width: 48%;
+    /* border: 2px solid red; */
+    line-height: 28px;
+    color: gray;
+}
+
+.parent-my-skills-section .left-my-skills-section h2 {
+    margin: 50px 0;
+    font-size: 30px;
+    color: black;
+}
+
+.btn {
+    margin-top: 50px;
+    padding: 15px 20px;
+    transition: all .3s ease;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border: 2px solid var(--green-color);
+    background-color: transparent;
+    color: #33d1cc;
+}
+
+.btn:hover {
+    background-color: var(--green-color);
+    color: white;
+}
+
+.parent-my-skills-section .right-my-skills-section {
+    margin-top: 50px;
+}
+
+.parent-my-skills-section .right-my-skills-section h2 {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.parent-my-skills-section .right-my-skills-section .process {
+    width: 500px;
+    height: 26px;
+    /* border: 2px solid red; */
+    margin-top: 20px;
+    position: relative;
+    background-color: #f2f2f2;
+
+}
+
+.parent-my-skills-section .right-my-skills-section .process::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: #33d1cc;
+}
+.parent-my-skills-section .right-my-skills-section .process-1::after {
+    width: 88%;
+
+}
+.parent-my-skills-section .right-my-skills-section .process-2::after {
+    width: 80%;
+
+}
+.parent-my-skills-section .right-my-skills-section .process-3::after {
+    width: 70%;
+
+}
+.parent-my-skills-section .right-my-skills-section .process-4::after {
+    width: 93%;
+
+}
+.resume-section {
+    height: 40vh;
+    /* border: 2px solid red; */
+    background-color: #f2f2f2;
+    position: relative;
+
+}
+
+.text-resume-section {
+    text-align: center;
+    width: 85%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 28px;
+    color: gray;
+}
+
+.text-resume-section h2 {
+    color: black;
+    margin-bottom: 25px;
+}
+
+.my-education-sectoin {
+    height: 80vh;
+    /* border: 2px solid red; */
+}
+
+.parent-my-education-sectoin {
+    display: flex;
+    justify-content: space-between;
+}
+
+.parent-my-education-sectoin .left-my-education-sectoin {
+    width: 600px;
+    height: 350px;
+    /* border: 2px solid green; */
+    line-height: 28px;
+}
+
+.parent-my-education-sectoin .left-my-education-sectoin h2 {
+    margin: 50px 0;
+}
+
+.parent-my-education-sectoin .right-my-education-sectoin {
+    width: 500px;
+    height: 450px;
+    /* border: 2px solid green; */
+    line-height: 28px;
+
+}
+
+.parent-my-education-sectoin .right-my-education-sectoin h2 {
+    margin: 5px 0;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.parent-my-education-sectoin .right-my-education-sectoin p {
+    margin: 15px 0;
+}
+
+.parent-my-education-sectoin .right-my-education-sectoin .gpa {
+    /* border: 2px solid red; */
+    background-color: #33d1cc;
+    width: fit-content;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.john-section {
+    height: 40vh;
+    /* border: 2px solid red; */
+    background-color: #f2f2f2;
+    position: relative;
+}
+
+.text-john-section {
+    text-align: center;
+    width: 65%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 28px;
+    color: gray;
+}
+
+.text-john-section h2 {
+    color: black;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.point-text-john-section {
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    width: 50px;
+    margin: auto;
+}
+
+.point-text-john-section .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--green-color);
+}
+
+.portfoli-section {
+    height: 120vh;
+    /* border: 2px solid red; */
+}
+
+.text-portfoli-section {
+    text-align: center;
+    line-height: 1.7;
+    width: 70%;
+    margin: auto;
+    /* border: 2px solid red; */
+}
+
+.text-portfoli-section h2 {
+    margin-top: 60px;
+    font-size: 35px;
+}
+
+.text-portfoli-section p {
+    margin: 30px 0;
+}
+
+.parent-portfoli-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.parent-portfoli-section .box-portfoli-section {
+    margin-top: 25px;
+    width: 30%;
+    height: 300px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 10px 10px 12px #ccc;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.parent-portfoli-section .box-portfoli-section::before {
+    /* font-family: FontAwesome;
+    content: "\f09a"; */
+    content: 'Mahrous';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #33d1cc;
+    opacity: .6;
+    visibility: hidden;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    line-height: 300px;
+    transition: all .3s ease;
+}
+
+.parent-portfoli-section .box-portfoli-section:hover::before {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    border-radius: 10px;
+}
+
+.parent-portfoli-section .box-portfoli-section img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.footer-section {
+    height: 105vh;
+    /* border: 2px solid red; */
+    background-color: #252f31;
+    color: #6a6e71;
+
+}
+
+.parent-footer-section {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.parent-footer-section .left-footer-sectoin {
+    width: 600px;
+    /* border: 2px solid blue; */
+    line-height: 1.7;
+    height: fit-content;
+}
+
+.parent-footer-section .left-footer-sectoin h2 {
+    margin: 20px 0;
+    color: #d1d6da;
+}
+
+.parent-footer-section .left-footer-sectoin .text-left-footer-sectoin {
+    margin: 30px 0;
+}
+
+.left-footer-sectoin .email-phone {
+    margin-top: 30px;
+}
+.left-footer-sectoin .email-phone strong,
+label {
+    color: #d1d6da;
+}
+.parent-footer-section .right-footer-sectoin {
+    width: 460px;
+    /* border: 2px solid blue; */
+    line-height: 1.7;
+    height: fit-content;
+    margin-top: 45px;
+}
+
+.right-footer-sectoin input,
+.right-footer-sectoin textarea {
+    display: block;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    background-color: #4b5557;
+    color: white;
+    /* outline: none; */
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.right-footer-sectoin textarea {
+    height: 250px;
+    resize: none;
+}
+
+.right-footer-sectoin form {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid green; */
+}
+.btn-contact-me {
+    padding: 15px 20px;
+    color: white;
+    border: none;
+    border: 2px solid white;
+    background-color: transparent;
+    transition: all .3s ease;
+    font-size: 16px;
+    cursor: pointer;
+    width: fit-content !important;
+    margin-bottom: 0;
+}
+
+.btn-contact-me:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.copy-right-footer-section {
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px 0;
+    background-color: black;
+}
+
+.copy-right-footer-section ul {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    list-style-type: none;
+    margin: auto;
+    margin-top: 25px;
+}
+.copy-right-footer-section ul .fab{
+   color: white;
+   transition:  all .3s ease;
+}
+.copy-right-footer-section ul .fab:hover{
+    color: #33d1cc;
+
+ }
